@@ -5,9 +5,9 @@ import pandas as pd
 df = pd.read_json("http://localhost:3030/flights?date=2020-01-01")
 df.to_csv('data.csv', mode='a', header=True)
 
+# Fetch 1 year data (2020) of AA's flights, save it in csv file
 months = range(1,13)
 days = range(1,30)
-
 for month in months:
     for day in days:
         if int(month) < 10 :
